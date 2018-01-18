@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4FE4A81-E694-41EB-B163-277DA8551C86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XXIV.Common</RootNamespace>
+    <AssemblyName>XXIV.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\BuildOutput\XXIV.Common\bin\Debug\</OutputPath><IntermediateOutputPath>C:\BuildOutput\XXIV.Common\obj\Debug\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\BuildOutput\XXIV.Common\bin\Release\</OutputPath><IntermediateOutputPath>C:\BuildOutput\XXIV.Common\obj\Release\</IntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Objects\Gestion\Tache_EventAction.cs" />
+    <Compile Include="Objects\Referenciel\Applicatif.cs" />
+    <Compile Include="Objects\BugTrackers\BugTracker.cs" />
+    <Compile Include="Objects\BugTrackers\BugTrackerTypes.cs" />
+    <Compile Include="Objects\BugTrackers\BugTracker_Tache.cs" />
+    <Compile Include="Objects\BugTrackers\BugTracker_Tache_Event.cs" />
+    <Compile Include="Objects\BugTrackers\BugTracker_Utilisateur.cs" />
+    <Compile Include="Objects\Referenciel\Composant.cs" />
+    <Compile Include="Objects\Referenciel\ConnaissancesType.cs" />
+    <Compile Include="Objects\DTOBase.cs" />
+    <Compile Include="Objects\Gestion\Evolution.cs" />
+    <Compile Include="Objects\Gestion\EvolutionEtat.cs" />
+    <Compile Include="Objects\Gestion\Evolution_Utilisateur.cs" />
+    <Compile Include="Objects\Referenciel\Fct.cs" />
+    <Compile Include="Objects\Gestion\Livraison.cs" />
+    <Compile Include="Objects\Gestion\TacheCriticite.cs" />
+    <Compile Include="Objects\Gestion\TacheType.cs" />
+    <Compile Include="Objects\Referenciel\UtilisateurProfil.cs" />
+    <Compile Include="Objects\Gestion\Tache.cs" />
+    <Compile Include="Objects\Gestion\Tache_Annexe.cs" />
+    <Compile Include="Objects\Gestion\Tache_Event.cs" />
+    <Compile Include="Objects\Referenciel\Utilisateur.cs" />
+    <Compile Include="Objects\Referenciel\Utilisateur_Fct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IServiceTaches.cs" />
+    <Compile Include="Services\IServiceUtilisateur.cs" />
+    <Compile Include="Sql\Sql.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
